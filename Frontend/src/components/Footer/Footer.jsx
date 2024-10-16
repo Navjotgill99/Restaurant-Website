@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-content-left">
             <img src={assets.logo} alt="" />
-            <p>Some Text</p>
+            <p>Bringing you an unforgettable dining experience with a perfect blend of taste, quality, and ambiance. Your satisfaction is our priority.</p>
             <div className="footer-social-icons">
                 <img src={assets.facebook_icon} alt="" />
                 <img src={assets.twitter_icon} alt="" />
@@ -20,20 +20,19 @@ const Footer = () => {
             <ul>
                 <li>Home</li>
                 <li>About us</li>
-                <li>Delivery</li>
                 <li>Privacy Policy</li>
             </ul>
         </div>
         <div className="footer-content-right">
             <h2>GET IN TOUCH</h2>
             <ul>
-                <li>+1-123-456-7890</li>
+                <li>+1-506-993-0226</li>
                 <li>contact@dine&delight.com</li>
             </ul>
         </div>
       </div>
       <hr />
-      <p className="footer-copyright">Copyright 2024 Dine&Delight.com - All Rights Reserved.</p>
+      <p className="footer-copyright"> &copy; 2024 Dine&Delight.com - All Rights Reserved.</p>
     </div>
   )
 }

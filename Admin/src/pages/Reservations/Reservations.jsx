@@ -12,7 +12,6 @@ const Reservations = ({ url }) => {
       if (response.data.success) {
         setReservations(response.data.data)
         console.log(response.data.data);
-        
       } else {
         toast.error("Error fetching reservations")
       }

@@ -17,7 +17,7 @@ const ViewReservations = () => {
       fetchReservations();
     }
   },[token])
-
+  
   return (
     <div className="view-reservations">
       <h2>Your Reservations</h2>
@@ -30,7 +30,7 @@ const ViewReservations = () => {
               <p>Date: {new Date(reservation.date).toLocaleDateString()}</p>
               <p>Time: {reservation.time}</p>
               <p>Guests: {reservation.guests}</p>
-              <p>Status: {reservation.date}</p>
+              <p>Status: {reservation.status}</p>
             </li>
           ))}
         </ul>

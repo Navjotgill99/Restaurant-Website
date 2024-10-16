@@ -41,48 +41,20 @@ const MakeReservation = () => {
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="date">Date:</label>
-          <input
-            type="date"
-            id="date"
-            name="date"
-            min={today}
-            required
-            value={reservation.date}
-            onChange={handleChange}
-          />
+          <input type="date" id="date" name="date" min={today} required value={reservation.date} onChange={handleChange}/>
         </div>
         <div>
           <label htmlFor="time">Time:</label>
-          <input
-            type="time"
-            id="time"
-            name="time"
-            min="11:00"
-            max="20:00"
-            required
-            value={reservation.time}
-            onChange={handleChange}
-          />
+          <input type="time" id="time" name="time" min="11:00" max="20:00" required value={reservation.time} onChange={handleChange} />
         </div>
         <div>
           <label htmlFor="guests">Number of Guests:</label>
-          <input
-            type="number"
-            id="guests"
-            name="guests"
-            min="1"
-            required
-            value={reservation.guests}
-            onChange={handleChange}
+          <input type="number" id="guests" name="guests" min="1" required value={reservation.guests} onChange={handleChange}
           />
         </div>
         <div>
           <label htmlFor="specialRequests">Special Requests:</label>
-          <textarea
-            id="specialRequests"
-            name="specialRequests"
-            value={reservation.specialRequests}
-            onChange={handleChange}
+          <textarea id="specialRequests" name="specialRequests" value={reservation.specialRequests} onChange={handleChange}
           ></textarea>
         </div>
         <button type="submit">Make Reservation</button>
