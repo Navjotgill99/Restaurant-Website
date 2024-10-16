@@ -1,0 +1,30 @@
+.reservations {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.reservations h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.reservations-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.reservations-buttons button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ff4e00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reservations-buttons button:hover {
+    background-color: #e64500;
+}

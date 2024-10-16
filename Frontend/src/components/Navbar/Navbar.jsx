@@ -25,7 +25,7 @@ const Navbar = ({setShowLogin}) => {
             <ul className="navbar-menu">
                 <Link to='/' onClick={() => setMenu("Home")} className={menu === "Home" ? "active" : ""}>Home</Link>
                 <a href='#explore-menu' onClick={() => setMenu("Menu")} className={menu === "Menu" ? "active" : ""}>Menu</a>
-                <a href='#explore-menu' onClick={() => setMenu("Reservations")} className={menu === "Reservations" ? "active" : ""}>Reservations</a>
+                <a href='#reservations' onClick={() => setMenu("Reservations")} className={menu === "Reservations" ? "active" : ""}>Reservations</a>
                 <a href='#footer' onClick={() => setMenu("Contact-us")} className={menu === "Contact-us" ? "active" : ""}>Contact Us</a>
             </ul>
             <div className="navbar-right">
@@ -38,7 +38,7 @@ const Navbar = ({setShowLogin}) => {
                 :<div className='navbar-profile'>
                     <img src={assets.profile_icon} alt="" />
                     <ul className='nav-profile-dropdown'>
-                        <li><img src={assets.bag_icon} alt="" /><p>Orders</p></li>
+                        <li onClick={()=>navigate('/myorders')}><img src={assets.bag_icon} alt="" /><p>Orders</p></li>
                         <hr />
                         <li onClick={logout}><img src={assets.logout_icon} alt="" /><p>Logout</p></li>
                     </ul>

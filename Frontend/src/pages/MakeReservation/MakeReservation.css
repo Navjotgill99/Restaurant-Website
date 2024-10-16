@@ -1,0 +1,46 @@
+.make-reservation {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.make-reservation h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.make-reservation form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.make-reservation input,
+.make-reservation textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.make-reservation textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.make-reservation button {
+    padding: 10px;
+    background-color: #ff4e00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.make-reservation button:hover {
+    background-color: #e64500;
+}
