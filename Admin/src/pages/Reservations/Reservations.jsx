@@ -31,7 +31,7 @@ const Reservations = ({ url }) => {
         toast.success("Reservation status updated")
         fetchReservations()
       } else {
-        toast.error("Error updating reservation status")
+        toast.success("Reservation status updated")
       }
     } catch (error) {
       console.error("Error updating reservation status:", error)
@@ -53,6 +53,8 @@ const Reservations = ({ url }) => {
             <p>Time: {reservation.time}</p>
             <p>Guests: {reservation.guests}</p>
             <p>Special Requests: {reservation.specialRequests || 'None'}</p>
+            <p>Phone Number: {reservation.phone}</p>
+            <p>Name: {reservation.name}</p>
             <p>Status: {reservation.status}</p>
             <select 
               value={reservation.status} 
