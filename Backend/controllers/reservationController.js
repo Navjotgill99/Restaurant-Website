@@ -8,7 +8,9 @@ const createReservation = async (req, res) => {
             date: req.body.date,
             time: req.body.time,
             guests: req.body.guests,
-            specialRequests: req.body.specialRequests
+            specialRequests: req.body.specialRequests,
+            phone: req.body.phone,
+            name: req.body.name
         });
         await newReservation.save();
         res.json({ success: true, message: "Reservation created successfully" });
@@ -34,8 +36,6 @@ const updateReservationStatus = async (req, res) => {
     try {
         const updatedReservation = await reservationModel.findByIdAndUpdate(req.body.reservationId, { status: req.body.status }, {new: true});
         if (updatedReservation) {
-            // Emit a socket event to notify clients of the update
-            io.emit('reservationUpdated', updatedReservation);
             
             res.json({ success: true, message: "Reservation status updated" });
         } else {
