@@ -6,6 +6,8 @@ const ReservationSchema = new mongoose.Schema({
     time:{type:String,required:true},
     guests:{type:Number,required:true},
     specialRequests:{type:String},
+    phone:{type:Number,required:true},
+    name:{type:String,required:true},
     status:{type:String,enum:['pending', 'confirmed', 'cancelled'],default: 'pending'}
 },{timestamps:true});
 
