@@ -12,7 +12,7 @@ import Reservations from './pages/Reservations/Reservations';
 
 const App = () => {
 
-  const url = "http://localhost:4000"
+  const url = "https://dineanddelight-backend.onrender.com"
   
   return (
     <div>
