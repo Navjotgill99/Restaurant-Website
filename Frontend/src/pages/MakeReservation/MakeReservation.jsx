@@ -11,7 +11,9 @@ const MakeReservation = () => {
     date: '',
     time: '',
     guests: 1,
-    specialRequests: ''
+    specialRequests: '',
+    phone: '',
+    name: ''
   });
 
   const handleChange = (e) => {
@@ -40,22 +42,32 @@ const MakeReservation = () => {
       <h2>Make a Reservation</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="date">Date:</label>
+          <label htmlFor="date">Date: </label>
           <input type="date" id="date" name="date" min={today} required value={reservation.date} onChange={handleChange}/>
         </div>
         <div>
-          <label htmlFor="time">Time:</label>
+          <label htmlFor="time">Time: </label>
           <input type="time" id="time" name="time" min="11:00" max="20:00" required value={reservation.time} onChange={handleChange} />
         </div>
         <div>
-          <label htmlFor="guests">Number of Guests:</label>
+          <label htmlFor="guests">Number of Guests: </label>
           <input type="number" id="guests" name="guests" min="1" required value={reservation.guests} onChange={handleChange}
           />
         </div>
         <div>
-          <label htmlFor="specialRequests">Special Requests:</label>
+          <label htmlFor="specialRequests">Special Requests: </label>
           <textarea id="specialRequests" name="specialRequests" value={reservation.specialRequests} onChange={handleChange}
           ></textarea>
+        </div>
+        <div>
+          <label htmlFor="phone">Phone Number: </label>
+          <input type="tel" id="phone" name="phone" placeholder="1234567890" required value={reservation.phone} onChange={handleChange}
+          />
+        </div>
+        <div>
+          <label htmlFor="name">Name: </label>
+          <input type="text" id="name" name="name" required value={reservation.name} onChange={handleChange}
+          />
         </div>
         <button type="submit">Make Reservation</button>
       </form>
