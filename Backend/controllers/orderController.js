@@ -22,11 +22,11 @@ const placeOrder = async (req,res) => {
             price_data:{
                 currency:"cad",
                 product_data:{
-                    name:itemm.name
+                    name:item.name,
                 },
-                unit_amount:item.price*100
+                unit_amount:item.price*100,
             },
-            quantity:item.quantity
+            quantity:item.quantity,
         }))
 
         line_items.push({
@@ -47,10 +47,10 @@ const placeOrder = async (req,res) => {
             cancel_url:`${frontend_url}/verify?success=false&orderId=${newOrder._id}`,
         })
 
-        res.json({Success:true,session_url:session.url})
+        res.json({success:true,session_url:session.url})
     } catch (error) {
-        console.log(error);
-        res.json({success:false,message:"Error"})
+        console.error("Error creating Stripe session:", error);
+        res.status(500).json({ success: false, message: "Error creating payment session" });
     }
 }
 

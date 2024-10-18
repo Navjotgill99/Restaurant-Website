@@ -33,7 +33,7 @@ const PlaceOrder = () => {
             if (cartItems[item._id]>0) {
                 let itemInfo = item;
                 itemInfo["quantity"] = cartItems[item._id];
-                orderItems.push(itemInfo)
+                orderItems.push(itemInfo);
             }
         })
         let orderData = {
@@ -75,7 +75,7 @@ const PlaceOrder = () => {
             <input required name='street' onChange={onChangehandler} value={data.street} type="text" placeholder='Street'/>
             <div className="multi-fields">
                 <input required name='city' onChange={onChangehandler} value={data.city} type="text" placeholder='City' />
-                <input required name='province' onChange={onChangehandler} value={data.Province} type="text" placeholder='Province'/>
+                <input required name='province' onChange={onChangehandler} value={data.province} type="text" placeholder='Province'/>
             </div>
             <div className="multi-fields">
                 <input required name='postalcode' onChange={onChangehandler} value={data.postalcode} type="text" placeholder='Postal code' />
